@@ -13,7 +13,9 @@ List of Use case to think though in term of scalability by systemComponent:
 ### GeoDNS to route the traffic :
   GeoDNS to direct the client to the data center closest to it.
 
-
+### Adding CDN: 
+    CDN stores copies of the static files in various data centers across the world, so a user can download these files from the data center that can provide them the lowest latency, which is usually the geographically closest one, though other data centers may be faster if the closest one is serving heavy traffic or suffering a partial outage.
+    
 ### High Peak Impact:
  * backend service receives thousands/more of requests per second than expected->
      * status code 504 responses due to timeouts ==> We must scale up our system.
